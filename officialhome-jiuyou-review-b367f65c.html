@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>九游娱乐 · 简明访问指南</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #f9f6f0;
+            font-family: system-ui, 'Noto Sans', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.75;
+            color: #2e2b26;
+            padding: 2rem 1.2rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .page {
+            max-width: 880px;
+            width: 100%;
+            background: #fffcf7;
+            border-radius: 28px;
+            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.05), 0 2px 8px rgba(0, 0, 0, 0.02);
+            padding: 2.8rem 2rem 3rem;
+        }
+        @media (max-width: 600px) {
+            .page {
+                padding: 1.8rem 1.2rem 2.2rem;
+                border-radius: 18px;
+            }
+            body {
+                padding: 1rem 0.6rem;
+            }
+        }
+
+        /* hero */
+        .hero {
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #ece6db;
+            margin-bottom: 2.4rem;
+        }
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: #201e1a;
+            margin-bottom: 0.5rem;
+        }
+        .hero .subhead {
+            font-size: 1.1rem;
+            color: #5f5a52;
+            margin-top: 0.25rem;
+            border-left: 4px solid #d9b382;
+            padding-left: 1rem;
+        }
+
+        /* section 通用 */
+        section {
+            margin-bottom: 2.6rem;
+        }
+        h2 {
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: #2f2b26;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        h2::before {
+            content: "▹";
+            color: #b28b62;
+            font-size: 1.1rem;
+        }
+        p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        /* 引用 / 提示框 */
+        .notice-box {
+            background: #f2ede4;
+            border-left: 6px solid #b79264;
+            padding: 1.2rem 1.6rem;
+            border-radius: 0 12px 12px 0;
+            margin: 1.4rem 0 1.8rem;
+        }
+        .notice-box p {
+            margin-bottom: 0.3rem;
+        }
+        .notice-box .label {
+            display: inline-block;
+            font-weight: 600;
+            font-size: 0.85rem;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            color: #8f6f4c;
+            margin-bottom: 0.2rem;
+        }
+
+        /* 特点卡片组 */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.2rem;
+            margin: 1.2rem 0 1.8rem;
+        }
+        .feature-item {
+            background: #f7f3eb;
+            border-radius: 14px;
+            padding: 1.2rem 1.2rem 1rem;
+            transition: background 0.2s;
+        }
+        .feature-item:hover {
+            background: #efeadf;
+        }
+        .feature-item h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #332e28;
+            margin-bottom: 0.3rem;
+        }
+        .feature-item p {
+            font-size: 0.92rem;
+            color: #4f4a42;
+            margin-bottom: 0;
+        }
+        @media (max-width: 500px) {
+            .feature-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
+
+        /* FAQ摘要 — 紧凑 */
+        .faq-preview {
+            background: #f5f0e7;
+            border-radius: 16px;
+            padding: 1.5rem 1.6rem 1.2rem;
+            margin: 1.2rem 0 1.8rem;
+        }
+        .faq-preview details {
+            margin-bottom: 0.6rem;
+            border-bottom: 1px dashed #d9cebd;
+            padding-bottom: 0.6rem;
+        }
+        .faq-preview details:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .faq-preview summary {
+            font-weight: 500;
+            cursor: pointer;
+            color: #3d3730;
+            padding: 0.2rem 0;
+            list-style: none;
+            display: flex;
+            align-items: center;
+        }
+        .faq-preview summary::-webkit-details-marker {
+            display: none;
+        }
+        .faq-preview summary::before {
+            content: "Q  ";
+            font-weight: 600;
+            color: #b28b62;
+            margin-right: 0.4rem;
+        }
+        .faq-preview details p {
+            margin: 0.4rem 0 0 1.2rem;
+            font-size: 0.92rem;
+            color: #4f4940;
+            padding-left: 0.6rem;
+            border-left: 2px solid #d9c8b0;
+        }
+
+        /* 底部链接区 */
+        .footer-links {
+            margin-top: 1.8rem;
+            padding-top: 1.6rem;
+            border-top: 1px solid #e4dbce;
+            font-size: 0.95rem;
+            color: #4f4940;
+        }
+        .footer-links .link-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem 1.6rem;
+            align-items: baseline;
+            margin-bottom: 0.3rem;
+        }
+        .footer-links a {
+            color: #5f4a32;
+            text-decoration: none;
+            border-bottom: 1px dotted #b79264;
+            transition: border-bottom 0.2s, color 0.2s;
+        }
+        .footer-links a:hover {
+            border-bottom: 2px solid #8f6f4c;
+            color: #2f241b;
+        }
+        .footer-note {
+            margin-top: 0.8rem;
+            font-size: 0.85rem;
+            color: #7b7266;
+        }
+
+        /* 内嵌链接（正文中的） */
+        .inline-link {
+            color: #5f4a32;
+            text-decoration: none;
+            border-bottom: 1px solid #cfbca5;
+            font-weight: 500;
+            transition: border-bottom 0.2s;
+        }
+        .inline-link:hover {
+            border-bottom: 2px solid #8f6f4c;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #e9e0d3;
+            margin: 1.6rem 0;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- HERO -->
+    <div class="hero">
+        <h1>九游娱乐 · 简明指南</h1>
+        <div class="subhead">一份整理过的访问说明与提醒，帮你更快了解这个平台。</div>
+    </div>
+
+    <!-- 为什么会有这个页面 -->
+    <section>
+        <h2>从何说起</h2>
+        <p>很多朋友初次接触 <strong>九游娱乐</strong> 时，往往会遇到信息零散的问题：找不到准确的访问位置、不清楚有哪些内容、也不知道从什么地方开始了解。这个页面就是基于这些常见疑问，把最核心的信息整理成一份清爽的参考——不绕弯子，不塞无关内容。</p>
+        <div class="notice-box">
+            <span class="label">📌 访问提醒</span>
+            <p>建议将 <a href="https://officialhome-jiuyou.com" class="inline-link">九游娱乐</a> 添加到浏览器书签，后续更新以该地址为准。非官方渠道的信息可能存在延迟或偏差，请多加留意。</p>
+        </div>
+    </section>
+
+    <!-- 优势区 / 特点 -->
+    <section>
+        <h2>几个值得了解的特点</h2>
+        <div class="feature-grid">
+            <div class="feature-item">
+                <h3>内容结构清晰</h3>
+                <p>导航与分类经过梳理，查找娱乐内容时不用在多层菜单间反复跳转。</p>
+            </div>
+            <div class="feature-item">
+                <h3>适配多种设备</h3>
+                <p>页面针对手机、平板和电脑均做了响应式适配，阅读体验相对一致。</p>
+            </div>
+            <div class="feature-item">
+                <h3>信息更新及时</h3>
+                <p>活动说明、版本调整等通知会集中展示，减少信息遗漏的可能。</p>
+            </div>
+            <div class="feature-item">
+                <h3>基础指引齐备</h3>
+                <p>新用户常见操作（注册、登录、账户设置）均有对应说明区域。</p>
+            </div>
+        </div>
+        <p>以上特点基于平台日常使用感受整理，具体功能以实际页面为准。建议初次访问时花几分钟浏览各个主模块，建立整体印象。</p>
+    </section>
+
+    <!-- 说明区：常见场景 -->
+    <section>
+        <h2>使用场景举例</h2>
+        <p><strong>日常浏览</strong>：直接打开 <a href="https://officialhome-jiuyou.com" class="inline-link">九游娱乐</a>，首页会展示当前推荐内容与分类入口，可根据兴趣进一步探索。</p>
+        <p><strong>查询活动或公告</strong>：通常可以在顶部导航栏或首页 banner 区域找到最新消息，部分通知也会在个人中心内显示。</p>
+        <p><strong>账户管理</strong>：登录后可在个人设置页面修改资料、查看记录，这部分操作逻辑与多数主流平台相似，不需要额外学习成本。</p>
+        <p style="margin-top: 0.6rem;">如果你在访问中遇到打不开或加载异常的情况，优先检查本地网络设置，或稍后再试。平台偶尔会有例行维护，届时页面会显示相应提示。</p>
+    </section>
+
+    <!-- FAQ 摘要区（折叠） -->
+    <section>
+        <h2>常见疑问摘要</h2>
+        <div class="faq-preview">
+            <details>
+                <summary>如何确认自己访问的是正确站点？</summary>
+                <p>请核对浏览器地址栏的域名是否为 <code>officialhome-jiuyou.com</code>，注意拼写细节。建议直接通过收藏夹或手动输入地址访问，避免使用非官方链接。</p>
+            </details>
+            <details>
+                <summary>首次访问需要做哪些准备？</summary>
+                <p>将浏览器更新到较新版本，并确保网络连接稳定。如果你希望记录个人偏好，可以注册账户；仅浏览的话直接打开页面即可。</p>
+            </details>
+            <details>
+                <summary>页面上的信息多久更新一次？</summary>
+                <p>活动与推荐内容会不定期调整，具体时效以页面标注为准。重大更新通常会有专门的说明或弹窗通知。</p>
+            </details>
+            <details>
+                <summary>遇到问题应该联系哪里？</summary>
+                <p>平台内一般设有客服入口或帮助中心，可通过页面底部的「联系」或「帮助」类链接提交反馈。处理时间视问题类型而定。</p>
+            </details>
+        </div>
+    </section>
+
+    <!-- 底部链接及说明 -->
+    <div class="footer-links">
+        <div class="link-row">
+            <span>主要地址：</span>
+            <a href="https://officialhome-jiuyou.com">九游娱乐</a>
+            <span style="color:#b7a48b;">·</span>
+            <a href="https://officialhome-jiuyou.com" style="border-bottom-style:solid;">九游娱乐</a>
+            <span style="color:#b7a48b;">·</span>
+            <span class="footer-note">（推荐使用 Chrome / Edge 最新版）</span>
+        </div>
+        <p class="footer-note" style="margin-top:0.2rem;">
+            本页为独立整理的说明参考，内容基于平台公开信息与常见用户疑问编写，仅供参考。
+        </p>
+        <p class="footer-note" style="margin-top:0.2rem;">
+            若页面显示与实际有所出入，以 <a href="https://officialhome-jiuyou.com" class="inline-link">九游娱乐</a> 官方页面为准。
+        </p>
+    </div>
+
+    <!-- 小小分隔，表示诚意 -->
+    <hr style="margin: 2.2rem 0 0.2rem; opacity: 0.3;">
+    <p style="text-align:center; font-size:0.8rem; color:#a39686; letter-spacing:0.5px;">—— 简明 · 可靠 · 不废话 ——</p>
+</div>
+</body>
+</html>
