@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>九游娱乐 · 产品说明</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    }
+
+    body {
+      background-color: #f4f5f7;
+      line-height: 1.7;
+      color: #1e1f2a;
+    }
+
+    /* 深色头图区 */
+    .hero {
+      background: linear-gradient(142deg, #0b0c10 0%, #1f2833 100%);
+      padding: 4rem 2rem 3.2rem;
+      text-align: center;
+      color: #d6d8e0;
+      border-bottom: 2px solid #2e3a46;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 400;
+      letter-spacing: 2px;
+      color: #f0f2f5;
+      margin-bottom: 0.6rem;
+    }
+
+    .hero .sub {
+      font-size: 1.2rem;
+      color: #b0b8c3;
+      margin-bottom: 2rem;
+      border-top: 1px solid #32414f;
+      display: inline-block;
+      padding-top: 0.6rem;
+    }
+
+    .hero .intro {
+      max-width: 680px;
+      margin: 1.2rem auto 0;
+      font-size: 1rem;
+      color: #cbd0d9;
+    }
+
+    /* 浅色正文区 */
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2.4rem 1.8rem 4rem;
+    }
+
+    section {
+      margin-bottom: 3.2rem;
+    }
+
+    .section-title {
+      font-size: 1.7rem;
+      font-weight: 400;
+      border-left: 5px solid #35637c;
+      padding-left: 1rem;
+      margin-bottom: 1.2rem;
+      color: #1b2836;
+      letter-spacing: 0.5px;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.6rem;
+      margin-top: 0.6rem;
+    }
+
+    .card {
+      background: #ffffff;
+      padding: 1.6rem 1.2rem;
+      border-radius: 14px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02), 0 1px 3px rgba(0,0,0,0.04);
+      transition: box-shadow 0.2s;
+      border: 1px solid #e6e9ed;
+    }
+
+    .card:hover {
+      box-shadow: 0 8px 20px rgba(28, 45, 67, 0.06);
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+      color: #1f2a36;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #3b4754;
+    }
+
+    .highlight-box {
+      background: #f0f4f9;
+      border-radius: 16px;
+      padding: 1.6rem 2rem;
+      margin: 1.8rem 0;
+      border-left: 4px solid #35637c;
+    }
+
+    .highlight-box p {
+      margin-bottom: 0.5rem;
+    }
+
+    .faq-item {
+      margin-bottom: 1.4rem;
+      border-bottom: 1px solid #dce2ea;
+      padding-bottom: 1rem;
+    }
+
+    .faq-item strong {
+      color: #1b2b3a;
+      display: block;
+      font-weight: 500;
+      margin-bottom: 0.3rem;
+      font-size: 1rem;
+    }
+
+    .faq-item p {
+      color: #424e5b;
+      font-size: 0.95rem;
+    }
+
+    a {
+      color: #2b6f97;
+      text-decoration: none;
+      border-bottom: 1px dotted #b0c6d6;
+      transition: color 0.15s, border-color 0.15s;
+    }
+
+    a:hover {
+      color: #1a4a6b;
+      border-bottom: 1px solid #1a4a6b;
+    }
+
+    .action-note {
+      font-size: 0.95rem;
+      background: #ffffff;
+      padding: 1.2rem 1.8rem;
+      border-radius: 40px;
+      border: 1px solid #d2dce7;
+      display: inline-block;
+      margin-top: 1.2rem;
+    }
+
+    .footer-note {
+      margin-top: 2.8rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #6a7a8a;
+      border-top: 1px solid #d7dde6;
+      padding-top: 2rem;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .hero {
+        padding: 2.8rem 1.2rem 2.2rem;
+      }
+      .container {
+        padding: 1.6rem 1rem 3rem;
+      }
+      .section-title {
+        font-size: 1.4rem;
+      }
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+      .highlight-box {
+        padding: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <h1>九游娱乐</h1>
+    <span class="sub">产品说明 · 持续关注</span>
+    <p class="intro">
+      一个聚合轻度休闲与内容体验的线上空间，适合在碎片时间里找到属于自己的放松节奏。
+      以下从产品摘要、体验亮点、使用建议等角度展开介绍。
+    </p>
+  </header>
+
+  <div class="container">
+    <!-- 摘要 / 再次访问的出发点 -->
+    <section>
+      <h2 class="section-title">产品摘要</h2>
+      <p>
+        当你在不同设备间切换，或者隔了一段时间后重新打开浏览器，也许收藏夹里有一些曾经随手保存的页面。
+        如果你曾对 <a href="https://official-portal-jiuyou.com">九游娱乐</a> 留有印象，这里依旧保持着简洁的调性，没有大幅改版或喧闹的引导。
+        它更像一个安静的角落，界面克制，内容围绕轻量互动与资讯浏览展开，不追求过度刺激。
+      </p>
+      <p style="margin-top: 0.8rem;">
+        本次说明侧重分享它值得再次回访的理由：稳定的访问路径、低学习成本、以及持续可用的基础功能。
+      </p>
+    </section>
+
+    <!-- 亮点：收藏与持续关注 -->
+    <section>
+      <h2 class="section-title">体验亮点</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>低门槛再次访问</h3>
+          <p>无需重复注册或记忆复杂流程。将页面加入书签后，每次返回都沿用之前的偏好设定，减少重新适应的时间。</p>
+        </div>
+        <div class="card">
+          <h3>克制的界面节奏</h3>
+          <p>没有弹窗、自动播放或强提醒。页面以卡片和分区信息为主，适合在等待、通勤或休息时安静浏览。</p>
+        </div>
+        <div class="card">
+          <h3>内容持续更新</h3>
+          <p>频道与推荐板块会定期轮换，但保持一致的视觉风格。长期关注者可以感受到细微的变化，而不需要重新学习布局。</p>
+        </div>
+        <div class="card">
+          <h3>跨平台一致性</h3>
+          <p>从手机浏览器到桌面端，响应式设计确保收藏的链接在任何屏幕下都呈现清晰的结构，不会出现错位或文字重叠。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 使用建议 / 场景 -->
+    <section>
+      <h2 class="section-title">使用建议</h2>
+      <div class="highlight-box">
+        <p><strong>▸ 适合作为浏览间隙的落脚点</strong> —— 不需要投入大量精力，打开后扫一眼标题或列表，有兴趣再深入，没有压力。</p>
+        <p><strong>▸ 收藏后定期回看</strong> —— 因为内容会自然更替，隔一两周再次回到 <a href="https://official-portal-jiuyou.com">九游娱乐</a>，可能会发现新的推荐或话题，但整体氛围依旧熟悉。</p>
+        <p><strong>▸ 保持平常心使用</strong> —— 平台不鼓励长时间沉迷，也没有排行榜或竞争机制。把它当作一个可随时离开、随时回来的普通站点即可。</p>
+      </div>
+    </section>
+
+    <!-- 可信但克制的访问说明 / FAQ 摘要 -->
+    <section>
+      <h2 class="section-title">常见想法 · 简短说明</h2>
+      <div class="faq-item">
+        <strong>为什么值得再次收藏？</strong>
+        <p>因为很多站点在你离开一段时间后会变得陌生，而这里的导航和信息层级一直保持稳定。你不需要重新摸索，收藏链接不会失效（前提是域名不变）。</p>
+      </div>
+      <div class="faq-item">
+        <strong>内容会不会变得很商业？</strong>
+        <p>目前没有明显商业化倾向。页面没有横幅广告或推广弹窗，资讯与互动模块仍然保持朴素、平实的风格。未来若有调整，也会以温和的方式过渡。</p>
+      </div>
+      <div class="faq-item">
+        <strong>我需要注册或登录吗？</strong>
+        <p>基本浏览无需账号。部分互动功能可能需要自愿参与，但不会强制索取个人信息。你可以一直以访客身份使用。</p>
+      </div>
+      <div class="faq-item">
+        <strong>长期关注有什么实际好处？</strong>
+        <p>主要是熟悉感与效率。当你把 <a href="https://official-portal-jiuyou.com">九游娱乐</a> 当成一个常备标签，每天或每周扫一眼，就能快速了解当前话题，而不需要从零搜索。</p>
+      </div>
+    </section>
+
+    <!-- 再次访问的温和提醒 -->
+    <div style="text-align: center; margin: 1.6rem 0 0.4rem;">
+      <span class="action-note">
+        ⇢ 如果觉得有用，可以将此页加入收藏夹。下次想回来时，直接点开就好。
+      </span>
+    </div>
+
+    <div class="footer-note">
+      <p>保持自然，持续关注。 ｜ 页面信息仅供产品说明，无诱导或承诺。</p>
+    </div>
+  </div>
+</body>
+</html>
